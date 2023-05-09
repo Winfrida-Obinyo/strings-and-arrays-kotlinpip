@@ -6,12 +6,7 @@ fun main() {
     val names = getNames("Alice", "Bob", "Charlie")
     println(names)
 
-    val cars = (getAverageMileage(listOf(
-        Car("ABC123", 10000.0),
-        Car("DEF456", 20000.0),
-        Car("GHI789", 15000.0)
-    )))
-    println(cars)
+
 
 
 
@@ -50,11 +45,20 @@ fun getNames(name1: String, name2: String, name3: String): Array<String> {
 }
 //rite a function that takes in a list of Car objects each with a registration and
 // mileage attribute and returns the average mileage of all the vehicles in the list
-data class Car(val registration: String, val mileage: Double)
+data class Car(val registration: String, val mileage: Double){
+
+
 fun getAverageMileage(cars: List<Car>): Double {
-    val totalMileage = cars.fold(0.0) { sum, car -> sum + car.mileage }
-    return totalMileage / cars.size
+    val cars =(listOf(
+        Car("ABC123", 10000.0),
+        Car("DEF456", 20000.0),
+        Car("GHI789", 15000.0)
+    ))
+
 }
+
+
+
 
 
 
